@@ -1,0 +1,92 @@
+/**
+ * User List Styles
+ */
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--white);
+}
+
+.user-list-header {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--white);
+}
+
+.user-list-header h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.user-search {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.user-search .form-control {
+  width: 100%;
+}
+
+.user-list-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.user-list-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-sm) 0;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md);
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: var(--transition);
+}
+
+.user-item:hover {
+  background-color: var(--light-bg);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+}
+
+.user-status {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}

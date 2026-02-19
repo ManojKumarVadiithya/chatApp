@@ -1,0 +1,71 @@
+# Backend (Java/Maven)
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/*.iml
+backend/.idea/
+backend/.vscode/
+backend/bin/
+backend/lib/
+backend/*.jar
+backend/.env
+backend/Dockerfile
+
+# Frontend (Node/npm)
+frontend/node_modules/
+frontend/dist/
+frontend/.cache/
+frontend/npm-debug.log
+frontend/yarn-error.log
+frontend/.vscode/
+frontend/.idea/
+frontend/.env
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+.env.local.php
+.sass-cache/
+npm-debug.log*
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Build artifacts
+build/
+dist/
+out/
+
+# Package managers
+.yarn-cache/
+.npm/
+
+# MongoDB
+.mongodb
+mongod.lock
+
+.github
+.vscode
+docs
