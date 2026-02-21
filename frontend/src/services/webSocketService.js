@@ -39,7 +39,7 @@ class WebSocketService {
       }
 
       const token = localStorage.getItem('token')
-      const wsUrl = import.meta.env.VITE_WS_URL || 'ws://localhost:8080'
+      const wsUrl = import.meta.env.VITE_WS_URL
 
       this.ws = new WebSocket(
         `${wsUrl}/ws/chat?token=${token}&userId=${userId}`

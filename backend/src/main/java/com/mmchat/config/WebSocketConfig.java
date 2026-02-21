@@ -19,14 +19,11 @@ public class WebSocketConfig implements WebSocketConfigurer {
     @Autowired
     private WebSocketHandshakeInterceptor webSocketHandshakeInterceptor;
 
-    @Value("${app.allowed-origin:http://localhost:5173}")
-    private String allowedOrigin;
-
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 
         registry.addHandler(chatWebSocketHandler, "/ws/chat")
                 .addInterceptors(webSocketHandshakeInterceptor)
-                .setAllowedOrigins(allowedOrigin);
+                .setAllowedOrigins("*");
     }
 }
