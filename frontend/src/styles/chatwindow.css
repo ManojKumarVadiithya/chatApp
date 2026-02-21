@@ -93,14 +93,15 @@
 }
 
 .message.sent .message-bubble {
-  background: #5f6fff;
-  color: white;
+  background: #2563EB;   /* Modern Blue */
+  color: #FFFFFF;
   border-bottom-right-radius: 4px;
 }
 
 .message.received .message-bubble {
-  background: white;
-  border: 1px solid #eee;
+  background: #F3F4F6;   /* Soft Grey */
+  color: #111827;        /* Dark text */
+  border: 1px solid #6ca7ce;
   border-bottom-left-radius: 4px;
 }
 

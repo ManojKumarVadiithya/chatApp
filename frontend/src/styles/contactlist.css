@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #ce66d8;
+  background: #F3E8FF;
 }
 
 /* HEADER */
@@ -133,12 +133,13 @@
 }
 
 .contact-item:hover {
-  background: #f5f7ff;
+  background: #E9D5FF;
 }
 
 .contact-item.active {
-  background: #eef1ff;
-  border-left: 3px solid #5f6fff;
+  background: #8B5CF6;
+  color: white;
+  /* border-left: 3px solid #5f6fff; */
 }
 
 /* AVATAR + STATUS */

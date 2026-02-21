@@ -42,11 +42,6 @@ public class MessageService {
         Conversation conversation = conversationRepository.findById(conversationId)
                 .orElseThrow(() -> new Exception("Conversation not found"));
         
-        System.out.println("[MessageService] sendMessage called:");
-        System.out.println("  conversationId: " + conversationId);
-        System.out.println("  senderId: " + senderId);
-        System.out.println("  participantIds: " + conversation.getParticipantIds());
-        
         if (!conversation.getParticipantIds().contains(senderId)) {
             throw new Exception("User is not a participant of this conversation");
         }
