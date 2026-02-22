@@ -3,7 +3,9 @@ package com.mmchat.websocket;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
+
+import java.time.Instant;
+// import java.time.LocalDateTime;
 
 /**
  * WebSocket message model for real-time communication
@@ -18,7 +20,7 @@ public class ChatMessage {
     private String senderName;
     private String content;
     private String messageId; // For read receipts
-    private LocalDateTime timestamp;
+    private Instant timestamp;
     
     public ChatMessage(String type, String conversationId, String senderId, String senderName, String content) {
         this.type = type;
@@ -26,6 +28,6 @@ public class ChatMessage {
         this.senderId = senderId;
         this.senderName = senderName;
         this.content = content;
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = Instant.now();
     }
 }

@@ -1,11 +1,12 @@
 package com.mmchat.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+// import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
+// import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -21,11 +22,11 @@ public class MessageDTO {
     private String fileUrl;
     private String fileName;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private LocalDateTime createdAt;
+    // @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Instant createdAt;
 
     private boolean isRead;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private LocalDateTime readAt;
+    // @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Instant readAt;
 }

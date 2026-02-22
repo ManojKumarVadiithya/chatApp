@@ -2,12 +2,12 @@ package com.mmchat.service;
 
 import com.mmchat.dto.ConversationDTO;
 import com.mmchat.model.Conversation;
-import com.mmchat.model.User;
+// import com.mmchat.model.User;
 import com.mmchat.repository.ConversationRepository;
 import com.mmchat.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.time.LocalDateTime;
+// import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 

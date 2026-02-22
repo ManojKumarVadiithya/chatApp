@@ -14,7 +14,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import java.time.LocalDateTime;
+
+import java.time.Instant;
+// import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -55,7 +57,7 @@ public class MessageService {
         message = messageRepository.save(message);
         
         // Update conversation's last message
-        conversation.setLastMessageAt(LocalDateTime.now());
+        conversation.setLastMessageAt(Instant.now());
         conversation.setLastMessageId(message.getId());
         conversation.setLastMessageContent(content);
         conversationRepository.save(conversation);
@@ -88,7 +90,7 @@ public class MessageService {
         
         if (!message.isRead()) {
             message.setRead(true);
-            message.setReadAt(LocalDateTime.now());
+            message.setReadAt(Instant.now());
             messageRepository.save(message);
         }
     }
@@ -112,7 +114,7 @@ public class MessageService {
         
         for (Message message : unreadMessages) {
             message.setRead(true);
-            message.setReadAt(LocalDateTime.now());
+            message.setReadAt(Instant.now());
             messageRepository.save(message);
         }
     }
@@ -136,7 +138,7 @@ public class MessageService {
         }
         
         message.setDeleted(true);
-        message.setUpdatedAt(LocalDateTime.now());
+        message.setUpdatedAt(Instant.now());
         messageRepository.save(message);
     }
     

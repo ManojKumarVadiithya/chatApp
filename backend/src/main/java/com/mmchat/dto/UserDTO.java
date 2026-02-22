@@ -1,9 +1,11 @@
 package com.mmchat.dto;
 
+import java.time.Instant;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
+// import java.time.LocalDateTime;
 
 /**
  * DTO for user profile (public information)
@@ -19,5 +21,5 @@ public class UserDTO {
     private String profileImage;
     private String bio;
     private String status; // online, offline, away
-    private LocalDateTime lastSeen;
+    private Instant lastSeen;
 }

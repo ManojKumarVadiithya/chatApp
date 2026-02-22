@@ -5,7 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import java.time.LocalDateTime;
+
+import java.time.Instant;
+// import java.time.LocalDateTime;
+// import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,9 +29,9 @@ public class Conversation {
     private List<String> participantIds; // List of user IDs
     private String createdById;
     
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-    private LocalDateTime lastMessageAt;
+    private Instant createdAt;
+    private Instant updatedAt;
+    private Instant lastMessageAt;
     
     private String lastMessageId;
     private String lastMessageContent; // Preview
@@ -41,8 +44,8 @@ public class Conversation {
         this.participantIds = new ArrayList<>();  // Changed from List.of() to new ArrayList<>()
         this.participantIds.add(userId1);
         this.participantIds.add(userId2);
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
         this.isActive = true;
     }
 }

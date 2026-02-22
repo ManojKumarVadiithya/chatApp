@@ -10,7 +10,9 @@ import com.mmchat.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import java.time.LocalDateTime;
+
+import java.time.Instant;
+// import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -83,7 +85,7 @@ public class UserService {
         
         // Update user status to online
         user.setStatus("online");
-        user.setUpdatedAt(LocalDateTime.now());
+        user.setUpdatedAt(Instant.now());
         userRepository.save(user);
         
         // Generate tokens
@@ -135,8 +137,8 @@ public class UserService {
     public void updateUserStatus(String userId, String status) throws Exception {
         User user = getUserById(userId);
         user.setStatus(status);
-        user.setLastSeen(LocalDateTime.now());
-        user.setUpdatedAt(LocalDateTime.now());
+        user.setLastSeen(Instant.now());
+        user.setUpdatedAt(Instant.now());
         userRepository.save(user);
     }
     
@@ -146,8 +148,8 @@ public class UserService {
     public void logout(String userId) throws Exception {
         User user = getUserById(userId);
         user.setStatus("offline");
-        user.setLastSeen(LocalDateTime.now());
-        user.setUpdatedAt(LocalDateTime.now());
+        user.setLastSeen(Instant.now());
+        user.setUpdatedAt(Instant.now());
         userRepository.save(user);
     }
     

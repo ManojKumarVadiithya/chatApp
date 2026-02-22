@@ -5,7 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import java.time.LocalDateTime;
+
+import java.time.Instant;
+// import java.time.LocalDateTime;
 
 /**
  * User model represents a registered user in the application
@@ -27,9 +29,9 @@ public class User {
     private String bio;
     private String status; // online, offline, away
     
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-    private LocalDateTime lastSeen;
+    private Instant createdAt;
+    private Instant updatedAt;
+    private Instant lastSeen;
     
     private boolean active;
     
@@ -40,7 +42,7 @@ public class User {
         this.displayName = displayName;
         this.status = "offline";
         this.active = true;
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 }

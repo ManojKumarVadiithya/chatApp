@@ -6,9 +6,11 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import java.time.Instant;
 
-import java.time.LocalDateTime;
+// import com.fasterxml.jackson.annotation.JsonFormat;
+
+// import java.time.LocalDateTime;
 
 /**
  * Message model represents a message sent between users
@@ -33,14 +35,14 @@ public class Message {
     private long fileSize; // Size in bytes
     private String mimeType; // MIME type of file
     
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private LocalDateTime createdAt;
+    // @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Instant createdAt;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private LocalDateTime updatedAt;
+    // @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Instant updatedAt;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private LocalDateTime readAt;
+    // @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Instant readAt;
 
     
     private boolean isRead; // Read status
@@ -54,7 +56,7 @@ public class Message {
         this.senderName = senderName;
         this.content = content;
         this.messageType = "text";
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = Instant.now();
         this.isRead = false;
         this.isDeleted = false;
     }
